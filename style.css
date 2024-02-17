@@ -108,4 +108,11 @@ h1{
     .container{
         height: 55vh;
     }
+
+    #new-btn{
+        width: 50vw;
+    }
+    #reset-btn{
+        width: 50vw;
+    }
 }
