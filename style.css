@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2C2C2C;
+    text-align: center;
+}
+
+.main{
+    margin-top: 5vh;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: "Vibur", sans-serif;
+    color: #fff;
+    text-shadow: 0 0 0px #fff, 0 0 2px #fff, 0 0 6px #11cece, 0 0 14px #11cece, 0 0 28px #11cece;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    background-color: #2C2C2C;
+    border-radius: 1rem;
+    color: #ffd60a;
+    cursor: pointer;
+    border: none;
+    font-size: 8vmin;
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.548),
+            1px 2px 3px 0px rgba(0, 255, 255, 0.548),
+            2px 3px 7px 0px rgba(0, 255, 255, 0.548),
+            2px 3px 14px 0px rgba(0, 255, 255, 0.548);
+}
+.box:hover{
+    background-color: #333333;
+}
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+    color: #2c2c2c;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #0ebdbd;
+    box-shadow: 0px 0px 8px 1px #272727e6;
+}
+#reset-btn:hover{
+    background-color: #11cece;
+}
+
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+    color: #2c2c2c;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #0ebdbd;
+    box-shadow: 0px 0px 8px 1px #272727e6;
+}
+#new-btn:hover{
+    background-color: #11cece;
+}
+
+#msg{
+    color: #ffd60a;
+    font-size: 5vmin;
+}
+
+.msg-container{
+    height: 100vmin;
+    font-family: "Vibur", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hide{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        height: 55vh;
+    }
+}
