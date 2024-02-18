@@ -20,7 +20,17 @@ h1{
     text-shadow: 0 0 0px #fff, 0 0 2px #fff, 0 0 6px #11cece, 0 0 14px #11cece, 0 0 28px #11cece;
 }
 
+.line{
+    height: 4px;
+    width: 65vh;
+    background-color: greenyellow;
+    position: absolute;
+    /* transform: translateX(0rem) translateY(0rem) rotate(0deg); */
+    
+}
+
 .container{
+    position: relative;
     height: 70vh;
     display: flex;
     justify-content: center;
