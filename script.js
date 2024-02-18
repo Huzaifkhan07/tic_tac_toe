@@ -3,29 +3,32 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let winLine = document.querySelector(".line");
 
 let turnX = true; // PlayerO, playerX
 let clickCount = 0;
 
 const winPatterns = [
-    [0,1,2],    
-    [0,3,6],
-    [0,4,8],
-    [1,4,7],
-    [2,5,8],
-    [2,4,6],
-    [3,4,5],
-    [6,7,8],
+    [0,1,2, 0,-9, 0 ],    
+    [0,3,6,-9, 0,90 ],
+    [0,4,8, 0, 0,45 ],
+    [1,4,7, 0, 0,90 ],
+    [2,5,8, 9, 0,90 ],
+    [2,4,6, 0, 0,-45],
+    [3,4,5, 0, 0, 0 ],
+    [6,7,8, 0, 9, 0 ],
 ];
 
 const resetGame = () =>{
     turnX = true;
     clickCount = 0; // Reset click count
     enableBoxes();
+    winLine.classList.add("hide");
     msgContainer.classList.add("hide");
 };
 
 boxes.forEach((box) =>{
+    
     box.addEventListener("click", () =>{   
         if(turnX){ //PlayerO
             box.style.color = "#FF9933";
@@ -70,7 +73,13 @@ const checkWinner = () =>{
 
         if(pos1Val != "" && pos2Val != "" &&  pos3Val != ""){
             if(pos1Val === pos2Val && pos2Val === pos3Val){
-                showWinner(pos1Val);
+                winLine.classList.remove("hide");
+                winLine.style.transform = `translateX(${pattern[3]}rem) translateY(${pattern[4]}rem) rotate(${pattern[5]}deg)`;
+                
+                setTimeout(function() {
+                    showWinner(pos1Val);
+                }, 2000); // 2000 milliseconds = 2 seconds
+                
                 return; // Exit function early if winner is found
             }
         }
