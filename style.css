@@ -115,6 +115,9 @@ h1{
 }
 
 @media only screen and (max-width: 768px) {
+    .line{
+        display: none;
+    }
     .container{
         height: 55vh;
     }
